@@ -1,0 +1,32 @@
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin rectangle($x, $y) {
+  width: $x;
+  height: $y;
+}
+
+//Mixins for media-query
+$tablet: 768px;
+$large: 992px;
+$xlarge: 1200px;
+
+@mixin tablet {
+  @media only screen and (min-width: $tablet) {
+    @content; //può contenere altro codice
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: $large) {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @media only screen and (min-width: $xlarge) {
+    @content;
+  }
+}

@@ -4,10 +4,22 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 //Mio SCSS
-@import "./mixin.scss";
+@import "./_mixin.scss";
 
 .box {
   @include square(100px);
+
+  @include tablet {
+    @include square(200px);
+  }
+
+  @include large {
+    @include square(250px);
+  }
+
+  @include xlarge {
+    @include square(300px);
+  }
 }
 
 .img-box-lg {
