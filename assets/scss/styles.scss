@@ -1,31 +1,101 @@
 //Mie variabili
-
+@import "./variables";
 //Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 //Mio SCSS
 @import "./_mixin.scss";
 
-.box {
-  @include square(100px);
+body {
+  background-image: url(https://redcapes.it/wp-content/uploads/2021/09/vought.png);
+  background-repeat: initial;
+  background-size: cover;
+}
 
+.navbar {
+  background-image: $navbar-color;
+}
+
+a {
+  img {
+    width: 50px;
+  }
+}
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
   @include tablet {
-    @include square(200px);
-  }
-
-  @include large {
-    @include square(250px);
-  }
-
-  @include xlarge {
-    @include square(300px);
+    width: 100%;
+    height: auto;
+    position: relative;
   }
 }
 
-.img-box-lg {
-  @include square(300px);
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  @include tablet {
+    float: left;
+  }
+  @include mobile {
+    text-align: center;
+    float: none;
+  }
 }
 
-.box-grow {
-  @include rectangle(100%, 100px);
+/* Active/current link */
+.sidebar a.active {
+  background-image: $navbar-color;
+  color: white;
 }
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-image: $navbar-color;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+  @include tablet {
+    margin-left: 0;
+  }
+}
+
+//ESEMPI LEZIONE
+// .box {
+//   @include square(100px);
+
+//   @include tablet {
+//     @include square(200px);
+//   }
+
+//   @include large {
+//     @include square(250px);
+//   }
+
+//   @include xlarge {
+//     @include square(300px);
+//   }
+// }
+
+// .img-box-lg {
+//   @include square(300px);
+// }
+
+// .box-grow {
+//   @include rectangle(100%, 100px);
+// }

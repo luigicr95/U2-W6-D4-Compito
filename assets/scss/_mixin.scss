@@ -9,24 +9,19 @@
 }
 
 //Mixins for media-query
-$tablet: 768px;
-$large: 992px;
-$xlarge: 1200px;
+$tablet: 700px;
+$mobile: 400px;
 
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
 @mixin tablet {
-  @media only screen and (min-width: $tablet) {
-    @content; //può contenere altro codice
-  }
-}
-
-@mixin large {
-  @media only screen and (min-width: $large) {
+  @media only screen and (max-width: $tablet) {
     @content;
   }
 }
 
-@mixin xlarge {
-  @media only screen and (min-width: $xlarge) {
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@mixin mobile {
+  @media only screen and (max-width: $mobile) {
     @content;
   }
 }
