@@ -1,1 +1,19 @@
+//Mie variabili
+
+//Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+//Mio SCSS
+@import "./mixin.scss";
+
+.box {
+  @include square(100px);
+}
+
+.img-box-lg {
+  @include square(300px);
+}
+
+.box-grow {
+  @include rectangle(100%, 100px);
+}
