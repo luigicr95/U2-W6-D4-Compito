@@ -6,8 +6,10 @@
 //Mio SCSS
 @import "./_mixin.scss";
 
+@import "./_sidebar.scss";
+
 body {
-  background-image: url(https://redcapes.it/wp-content/uploads/2021/09/vought.png);
+  background-image: $navbar-color;
   background-repeat: initial;
   background-size: cover;
 }
@@ -19,59 +21,6 @@ body {
 a {
   img {
     width: 50px;
-  }
-}
-
-/* The side navigation menu */
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-  @include tablet {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-}
-
-/* Sidebar links */
-.sidebar a {
-  display: block;
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-  @include tablet {
-    float: left;
-  }
-  @include mobile {
-    text-align: center;
-    float: none;
-  }
-}
-
-/* Active/current link */
-.sidebar a.active {
-  background-image: $navbar-color;
-  color: white;
-}
-
-/* Links on mouse-over */
-.sidebar a:hover:not(.active) {
-  background-image: $navbar-color;
-  color: white;
-}
-
-/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
-  @include tablet {
-    margin-left: 0;
   }
 }
 

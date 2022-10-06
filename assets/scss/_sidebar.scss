@@ -1,0 +1,43 @@
+.sidebar {
+  height: 50vh;
+  position: sticky;
+  top: 15%;
+  @include tablet {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  @include tablet {
+    float: left;
+  }
+  @include mobile {
+    text-align: center;
+    float: none;
+  }
+}
+
+.sidebar a.active {
+  background-image: $navbar-color;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-image: $navbar-color;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+  @include tablet {
+    margin-left: 0;
+  }
+}

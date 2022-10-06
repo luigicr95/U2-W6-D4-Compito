@@ -10771,31 +10771,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-body {
-  background-image: url(https://redcapes.it/wp-content/uploads/2021/09/vought.png);
-  background-repeat: initial;
-  background-size: cover;
-}
-
-.navbar {
-  background-image: linear-gradient(to right, #1f1c2c, #928dab);
-}
-
-a img {
-  width: 50px;
-}
-
-/* The side navigation menu */
 .sidebar {
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
+  height: 50vh;
+  position: sticky;
+  top: 15%;
 }
 @media only screen and (max-width: 700px) {
   .sidebar {
@@ -10805,7 +10784,6 @@ a img {
   }
 }
 
-/* Sidebar links */
 .sidebar a {
   display: block;
   color: black;
@@ -10824,19 +10802,16 @@ a img {
   }
 }
 
-/* Active/current link */
 .sidebar a.active {
   background-image: linear-gradient(to right, #1f1c2c, #928dab);
   color: white;
 }
 
-/* Links on mouse-over */
 .sidebar a:hover:not(.active) {
   background-image: linear-gradient(to right, #1f1c2c, #928dab);
   color: white;
 }
 
-/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
   margin-left: 200px;
   padding: 1px 16px;
@@ -10846,4 +10821,18 @@ div.content {
   div.content {
     margin-left: 0;
   }
+}
+
+body {
+  background-image: linear-gradient(to right, #1f1c2c, #928dab);
+  background-repeat: initial;
+  background-size: cover;
+}
+
+.navbar {
+  background-image: linear-gradient(to right, #1f1c2c, #928dab);
+}
+
+a img {
+  width: 50px;
 }

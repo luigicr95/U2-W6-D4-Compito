@@ -1,25 +1,25 @@
-@mixin square($size) {
-  width: $size;
-  height: $size;
-}
+//ESEMPI LEZIONE
 
-@mixin rectangle($x, $y) {
-  width: $x;
-  height: $y;
-}
+// @mixin square($size) {
+//   width: $size;
+//   height: $size;
+// }
+
+// @mixin rectangle($x, $y) {
+//   width: $x;
+//   height: $y;
+// }
 
 //Mixins for media-query
 $tablet: 700px;
 $mobile: 400px;
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
 @mixin tablet {
   @media only screen and (max-width: $tablet) {
     @content;
   }
 }
 
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
 @mixin mobile {
   @media only screen and (max-width: $mobile) {
     @content;
